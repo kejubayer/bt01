@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\DashboardController::class,'index']);
 
 Route::get('/test', [\App\Http\Controllers\DashboardController::class,'test']);
+
+Route::get('/users', [\App\Http\Controllers\UserController::class,'index'])->name('user.index');
+Route::get('/users/create', [\App\Http\Controllers\UserController::class,'create'])->name('user.create');
+Route::post('/users/store', [\App\Http\Controllers\UserController::class,'store'])->name('user.store');
+
+
